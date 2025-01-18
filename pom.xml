@@ -63,11 +63,11 @@
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.apache.axis2/axis2-webapp -->
-	<dependency>
+<!--	<dependency>
 	    <groupId>org.apache.axis2</groupId>
 	    <artifactId>axis2-webapp</artifactId>
 	    <version>1.6.2</version>
-	</dependency>
+	</dependency>-->
 
 	
 	<dependency>
