@@ -47,7 +47,7 @@ A continuación, se detallan los pasos para ejecutar el proyecto en un entorno U
    ```bash
    mvn clean install
 6. **Copiar los JARs necesarios para Axis2:**
-   Debido a que el repositorio de Axis2 no está disponible actualmente, copia los JARs proporcionados a la carpeta WEB-INF/lib del proyecto:
+Debido a que el repositorio de Axis2 no está disponible actualmente, copia los JARs proporcionados a la carpeta WEB-INF/lib del proyecto:
    ```bash
    cp -f src/main/webapp/allowed-jars/axis2-* src/main/webapp/WEB-INF/lib/
 
@@ -64,9 +64,12 @@ A continuación, se detallan los pasos para ejecutar el proyecto en un entorno U
    sudo docker run -d -p 8180:8180 --name pokemonsoap-container ubuntu-tomcat-pokemonsoap
 
 10. **Acceder al WSDL del servicio SOAP:**
-   Una vez que el contenedor esté ejecutándose, puedes obtener el WSDL del servicio en la siguiente URL:
+
+Una vez que el contenedor esté ejecutándose, puedes obtener el WSDL del servicio en la siguiente URL:
+
 [http://localhost:8180/pokemonsoap/services/PokemonService?wsdl](http://localhost:8180/pokemonsoap/services/PokemonService?wsdl)
 
+---
 ### Información Adicional
 Este proyecto utiliza la API pública de PokeAPI para proporcionar la información de los Pokémon.
 
