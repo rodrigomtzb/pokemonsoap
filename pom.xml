@@ -53,12 +53,13 @@
         <version>1.8.0</version>
     </dependency>
 
-    <!-- Apache Axis2 Webapp (para la configuración de AxisServlet) -->
-    <dependency>
-        <groupId>org.apache.axis2</groupId>
-        <artifactId>axis2-webapp</artifactId>
-        <version>1.7.9</version>
-    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.axis2/axis2-webapp -->
+	<dependency>
+	    <groupId>org.apache.axis2</groupId>
+	    <artifactId>axis2-webapp</artifactId>
+	    <version>1.8.2</version>
+	</dependency>
+
 	
 	<dependency>
 	  <groupId>javax.activation</groupId>
