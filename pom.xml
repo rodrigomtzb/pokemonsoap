@@ -36,9 +36,29 @@
 	<dependency>
 	    <groupId>org.apache.axis2</groupId>
 	    <artifactId>axis2</artifactId>
-	    <version>1.6.2</version>
+	    <version>1.8.2</version>
 	    <type>pom</type>
 	</dependency>
+	
+	<dependency>
+        <groupId>org.apache.axis2</groupId>
+        <artifactId>axis2-kernel</artifactId>
+        <version>1.8.0</version> <!-- Usa la última versión estable -->
+    </dependency>
+
+    <!-- Apache Axis2 Transport (para HTTP) -->
+    <dependency>
+        <groupId>org.apache.axis2</groupId>
+        <artifactId>axis2-transport-http</artifactId>
+        <version>1.8.0</version>
+    </dependency>
+
+    <!-- Apache Axis2 Webapp (para la configuración de AxisServlet) -->
+    <dependency>
+        <groupId>org.apache.axis2</groupId>
+        <artifactId>axis2-webapp</artifactId>
+        <version>1.8.0</version>
+    </dependency>
 	
 	<dependency>
 	  <groupId>javax.activation</groupId>
