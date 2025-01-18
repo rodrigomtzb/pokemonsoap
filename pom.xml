@@ -38,6 +38,15 @@
         <name>Apache Snapshots</name>
         <url>https://repository.apache.org/snapshots</url>
     </repository>
+    <repository>
+        <id>apache-repo</id>
+        <name>Apache Repository</name>
+        <url>https://repository.apache.org/content/repositories/releases/</url>
+    </repository>
+    <repository>
+        <id>central</id>
+        <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
 </repositories>
   
   <dependencies>
@@ -52,24 +61,23 @@
 	<dependency>
         <groupId>org.apache.axis2</groupId>
         <artifactId>axis2-kernel</artifactId>
-        <version>1.8.0</version> <!-- Usa la última versión estable -->
+        <version>1.8.2</version>
     </dependency>
 
     <!-- Apache Axis2 Transport (para HTTP) -->
     <dependency>
         <groupId>org.apache.axis2</groupId>
         <artifactId>axis2-transport-http</artifactId>
-        <version>1.8.0</version>
+        <version>1.8.2</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.apache.axis2/axis2-webapp -->
-<!--	<dependency>
+	<dependency>
 	    <groupId>org.apache.axis2</groupId>
 	    <artifactId>axis2-webapp</artifactId>
-	    <version>1.6.2</version>
-	</dependency>-->
+	    <version>1.8.2</version>
+	</dependency>
 
-	
 	<dependency>
 	  <groupId>javax.activation</groupId>
 	  <artifactId>javax.activation-api</artifactId>
