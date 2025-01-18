@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://service.jaxws.pokemonsoap.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://service.jaxws.pokemonsoap.com" xmlns:intf="http://service.jaxws.pokemonsoap.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4.1-SNAPSHOT
+Built on Nov 07, 2023 (07:57:58 UTC)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://service.jaxws.pokemonsoap.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getAbilities">
+    <complexType>
+     <sequence>
+      <element name="pokemonName" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAbilitiesResponse">
+    <complexType>
+     <sequence>
+      <element name="getAbilitiesReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getAbilitiesRequest">
+
+      <wsdl:part element="impl:getAbilities" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAbilitiesResponse">
+
+      <wsdl:part element="impl:getAbilitiesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="PokemonService">
+
+      <wsdl:operation name="getAbilities">
+
+         <wsdl:input message="impl:getAbilitiesRequest" name="getAbilitiesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getAbilitiesResponse" name="getAbilitiesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="PokemonServiceSoapBinding" type="impl:PokemonService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getAbilities">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAbilitiesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAbilitiesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="PokemonServiceService">
+
+      <wsdl:port binding="impl:PokemonServiceSoapBinding" name="PokemonService">
+
+         <wsdlsoap:address location="http://localhost:8080/pokemonsoap/services/PokemonService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

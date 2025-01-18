@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><wsdd:deployment xmlns:wsdd="http://xml.apache.org/axis/wsdd/" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java" xmlns:service.jaxws.pokemonsoap.com="http://service.jaxws.pokemonsoap.com">
+  <wsdd:service name="PokemonService" provider="java:RPC" use="literal" style="wrapped">
+    <wsdd:parameter name="wsdlTargetNamespace" value="http://service.jaxws.pokemonsoap.com"/>
+    <wsdd:parameter name="wsdlServiceElement" value="PokemonServiceService"/>
+    <wsdd:parameter name="schemaQualified" value="http://service.jaxws.pokemonsoap.com"/>
+    <wsdd:parameter name="wsdlServicePort" value="PokemonService"/>
+    <wsdd:parameter name="className" value="com.pokemonsoap.jaxws.service.PokemonService"/>
+    <wsdd:parameter name="wsdlPortType" value="PokemonService"/>
+    <wsdd:parameter name="typeMappingVersion" value="1.2"/>
+    <wsdd:parameter name="allowedMethods" value="getAbilities"/>
+    <wsdd:operation name="getAbilities" qname="service.jaxws.pokemonsoap.com:getAbilities" returnQName="service.jaxws.pokemonsoap.com:getAbilitiesReturn" returnType="XMLSchema:string" soapAction="">
+      <wsdd:parameter qname="service.jaxws.pokemonsoap.com:pokemonName" type="XMLSchema:string"/>
+    </wsdd:operation>
+  </wsdd:service>
+</wsdd:deployment>
